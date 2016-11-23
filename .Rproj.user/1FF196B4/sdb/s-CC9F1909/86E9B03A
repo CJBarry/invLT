@@ -1,0 +1,17 @@
+{
+    "contents" : "#Christopher Barry, started on 05/02/2015 at University of Birmingham\n#last updated 08/04/2015\n\n#co-ordinate conversion from cartesian to polar, and back\n\n#' Conversion from cartesian to polar co-ordinates\n#' @title Cartesian to Polar\n#' @describeIn r.xy Returns polar co-ordinate r from cartesian co-ordinates x and y.\n#'\n#' @param x x co-ordinate\n#' @param y y co-ordinate\n#' @return r or phi respectively from x and y\nr.xy <- function(x, y){\n  return((x^2 + y^2)^0.5)\n}\n\n#' @describeIn r.xy Returns polar co-ordinate phi (anti-clockwise rotation from positive x-axis) from cartesian co-ordinates x and y.\nphi.xy <- function(x, y){\n  return(atan2(y, x)) #note use of atan2 for the sake of points left of y axis\n}\n\n#' Conversion from polar to cartesian co-ordinates\n#' @title Polar to Cartesian\n#' @describeIn x.rphi Returns cartesian co-ordinate x from polar co-ordinates r and phi.\n#'\n#' @param r distance from origin\n#' @param phi anti-clockwise rotation from positive x-axis\n#' @return x or t respectively from r and phi\nx.rphi <- function(r, phi){\n  return(r*cos(phi))\n}\n\n#' @describeIn x.rphi Returns cartesian co-ordinate x from polar co-ordinates r and phi.\ny.rphi <- function(r, phi){\n  return(r*sin(phi))\n}\n",
+    "created" : 1440504871592.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2912000628",
+    "id" : "86E9B03A",
+    "lastKnownWriteTime" : 1440512535,
+    "path" : "~/Scripts/R/invLT/R/PolarCart.R",
+    "project_path" : "R/PolarCart.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
